@@ -1,11 +1,13 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import { schema } from './src/sanity/schemaTypes'
 
 export default defineConfig({
-  projectId: '2819wsin',
+  projectId: '28l9wsin',
   dataset: 'production',
-  name: 'craft-studio',
-  title: 'Craft Admin',
+  name: 'craft-web',
+  title: 'Craft Web',
   basePath: '/studio',
   plugins: [structureTool()],
+  schema,
 })
