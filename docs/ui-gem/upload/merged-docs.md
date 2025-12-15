@@ -104,7 +104,6 @@ import { cn } from "@muatmuat/lib/utils";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import { IconComponent } from "../IconComponent";
-
 ```
 
 ## Overview
@@ -1921,46 +1920,43 @@ function Example() {
 ### Types
 
 ```typescript
-export interface BottomSheetProps
-  extends Omit<
-    React.ComponentProps<typeof BottomSheetPrimitive.Root>,
-    "children" | "fadeFromIndex"
-  > {
+export interface BottomSheetProps extends Omit<
+  React.ComponentProps<typeof BottomSheetPrimitive.Root>,
+  "children" | "fadeFromIndex"
+> {
   children?: React.ReactNode;
 }
 
-export interface BottomSheetTriggerProps
-  extends Omit<
-    React.ComponentProps<typeof BottomSheetPrimitive.Trigger>,
-    "children"
-  > {
+export interface BottomSheetTriggerProps extends Omit<
+  React.ComponentProps<typeof BottomSheetPrimitive.Trigger>,
+  "children"
+> {
   children?: React.ReactNode;
 }
 
-export interface BottomSheetContentProps
-  extends React.ComponentProps<typeof BottomSheetPrimitive.Content> {
+export interface BottomSheetContentProps extends React.ComponentProps<
+  typeof BottomSheetPrimitive.Content
+> {
   className?: string;
   children: React.ReactNode;
 }
 
-export interface BottomSheetHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface BottomSheetHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children: React.ReactNode;
 }
 
-export interface BottomSheetTitleProps
-  extends React.ComponentProps<typeof BottomSheetPrimitive.Title> {
+export interface BottomSheetTitleProps extends React.ComponentProps<
+  typeof BottomSheetPrimitive.Title
+> {
   className?: string;
 }
 
-export interface BottomSheetCloseProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BottomSheetCloseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export interface BottomSheetFooterProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface BottomSheetFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 ```
@@ -1983,46 +1979,43 @@ export interface BottomSheetFooterProps
 ## Component Code
 
 ```tsx
-export interface BottomSheetProps
-  extends Omit<
-    React.ComponentProps<typeof BottomSheetPrimitive.Root>,
-    "children" | "fadeFromIndex"
-  > {
+export interface BottomSheetProps extends Omit<
+  React.ComponentProps<typeof BottomSheetPrimitive.Root>,
+  "children" | "fadeFromIndex"
+> {
   children?: React.ReactNode;
 }
 
-export interface BottomSheetTriggerProps
-  extends Omit<
-    React.ComponentProps<typeof BottomSheetPrimitive.Trigger>,
-    "children"
-  > {
+export interface BottomSheetTriggerProps extends Omit<
+  React.ComponentProps<typeof BottomSheetPrimitive.Trigger>,
+  "children"
+> {
   children?: React.ReactNode;
 }
 
-export interface BottomSheetContentProps
-  extends React.ComponentProps<typeof BottomSheetPrimitive.Content> {
+export interface BottomSheetContentProps extends React.ComponentProps<
+  typeof BottomSheetPrimitive.Content
+> {
   className?: string;
   children: React.ReactNode;
 }
 
-export interface BottomSheetHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface BottomSheetHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children: React.ReactNode;
 }
 
-export interface BottomSheetTitleProps
-  extends React.ComponentProps<typeof BottomSheetPrimitive.Title> {
+export interface BottomSheetTitleProps extends React.ComponentProps<
+  typeof BottomSheetPrimitive.Title
+> {
   className?: string;
 }
 
-export interface BottomSheetCloseProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BottomSheetCloseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export interface BottomSheetFooterProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface BottomSheetFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
@@ -2771,8 +2764,7 @@ export type ButtonVariant =
   | "muatparts-warning"
   | "link";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   children?: React.ReactNode;
   className?: string;
@@ -2817,8 +2809,7 @@ export type ButtonVariant =
   | "muatparts-warning"
   | "link";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   children?: React.ReactNode;
   className?: string;
@@ -3625,7 +3616,6 @@ import { IconComponent } from "../IconComponent";
 import { Popover, PopoverContent, PopoverTrigger } from "../Popover";
 import { Calendar } from "./Calendar";
 import { DatePickerWebProps } from "./types";
-
 ```
 
 ## Overview
@@ -4393,7 +4383,6 @@ import { IconComponent } from "../IconComponent";
 import { Popover, PopoverContent, PopoverTrigger } from "../Popover";
 import { Calendar } from "./Calendar";
 import { DateTimePickerWebProps, TimeColumnProps } from "./types";
-
 ```
 
 ## Overview
@@ -6882,7 +6871,6 @@ import Cropper from "react-cropper";
 import { IconComponent } from "../IconComponent";
 import style from "./CropperResponsive.module.scss";
 import { CropperResponsiveProps } from "./types";
-
 ```
 
 ## Overview
@@ -9957,11 +9945,10 @@ export interface CheckboxAppearance {
   labelClassName?: string;
 }
 
-export interface CheckboxProps
-  extends Omit<
-    React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-    "id" // Omit to handle it internally
-  > {
+export interface CheckboxProps extends Omit<
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
+  "id" // Omit to handle it internally
+> {
   /**
    * The content to be displayed as the checkbox's label.
    */
@@ -10883,8 +10870,10 @@ export type InputAppearance = {
  * A standard translation function signature.
  */
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+export interface InputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange"
+> {
   /**
    * The current value of the input. Required for the `withReset` feature to work correctly.
    */
@@ -11821,7 +11810,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@muatmuat/ui/Popover";
 import { ChevronDown } from "lucide-react";
 import * as RPNInput from "react-phone-number-input";
 import flags from "react-phone-number-input/flags";
-
 ```
 
 ## Overview
@@ -13011,8 +12999,10 @@ export interface SelectOption {
   label: string;
 }
 
-export interface SelectProps
-  extends Omit<RadixSelectProps, "value" | "onValueChange" | "disabled"> {
+export interface SelectProps extends Omit<
+  RadixSelectProps,
+  "value" | "onValueChange" | "disabled"
+> {
   options?: SelectOption[];
   value?: string;
   onChange?: (value: string) => void;
@@ -13663,8 +13653,7 @@ export interface TextAreaAppearance {
   inputClassName?: string;
 }
 
-export interface TextAreaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
    * The current value of the textarea.
    */
@@ -14028,8 +14017,10 @@ export interface SimpleHoverProps extends Omit<HoverCardRootProps, "children"> {
 
 export interface SimpleHoverTriggerProps extends HoverCardTriggerProps {}
 
-export interface SimpleHoverContentProps
-  extends Omit<HoverCardContentProps, "children"> {
+export interface SimpleHoverContentProps extends Omit<
+  HoverCardContentProps,
+  "children"
+> {
   children: React.ReactNode;
   side?: "top" | "right" | "bottom" | "left";
   align?: "start" | "center" | "end";
@@ -14846,7 +14837,6 @@ import { cn } from "@muatmuat/lib/utils";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
 import { getAssetPath } from "../../lib/asset-path";
-
 ```
 
 ## Overview
@@ -15338,7 +15328,7 @@ export function MapWithPathExample() {
       <div className="rounded-lg border border-gray-200 p-4">
         <h3 className="mb-2 font-medium"> Logistics Route Tracking </h3>
         <MapWithPath
-          apiKey="AIzaSyDw_9D9-4zTechHn1wMEILZqiBv51Q7jHU"
+          apiKey="YOUR_GOOGLE_MAPS_API_KEY"
           mapContainerStyle={{ width: "100%", height: "500px" }}
           center={{ lat: -7.2575, lng: 112.7521 }}
           zoom={12}
@@ -15436,7 +15426,7 @@ export function MapWithPathExample() {
 
 | Prop                 | Type                                  | Default                                                                                  | Description                                                  |
 | -------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| apiKey               | `string`                              | "AIzaSyDw_9D9-4zTechHn1wMEILZqiBv51Q7jHU"                                                | Google Maps API key                                          |
+| apiKey               | `string`                              | "YOUR_GOOGLE_MAPS_API_KEY"                                                               | Google Maps API key                                          |
 | mapContainerStyle    | `React.CSSProperties`                 | `{ width: "100%", height: "400px" }`                                                     | Custom CSS styles for the map container                      |
 | center               | `{lat: number, lng: number}`          | `{ lat: -7.2575, lng: 112.7521 }`                                                        | Map center coordinates                                       |
 | zoom                 | `number`                              | 13                                                                                       | Map zoom level                                               |
@@ -15599,7 +15589,7 @@ const calculateBearing = (start: any, end: any) => {
  * Perfect for logistics, delivery tracking, and route optimization interfaces.
  */
 export const MapWithPath = ({
-  apiKey = "AIzaSyDw_9D9-4zTechHn1wMEILZqiBv51Q7jHU",
+  apiKey = "YOUR_GOOGLE_MAPS_API_KEY",
   mapContainerStyle = defaultMapContainerStyle,
   center = defaultCenter,
   zoom = defaultZoom,
@@ -16439,7 +16429,12 @@ _Source: packages/ui/src/content/docs/components/Modal/Modal.mdx_
 ```javascript
 import { Button } from "@muatmuat/ui/Button";
 import { useState } from "react";
-import { Modal, ModalContent, ModalTitle, ModalTrigger } from "@muatmuat/ui/Modal";
+import {
+  Modal,
+  ModalContent,
+  ModalTitle,
+  ModalTrigger,
+} from "@muatmuat/ui/Modal";
 
 import { useState } from "react";
 
@@ -16450,7 +16445,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 
 import { IconComponent } from "../IconComponent";
 import { ImageComponent } from "../ImageComponent";
-
 ```
 
 ## Overview
@@ -18496,16 +18490,16 @@ import { ScrollAreaPreview } from "../../preview/ScrollArea.preview";
 ### Types
 
 ```typescript
-export interface ScrollAreaProps
-  extends React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> {
+export interface ScrollAreaProps extends React.ComponentPropsWithoutRef<
+  typeof ScrollAreaPrimitive.Root
+> {
   className?: string;
   children: React.ReactNode;
 }
 
-export interface ScrollBarProps
-  extends React.ComponentPropsWithoutRef<
-    typeof ScrollAreaPrimitive.ScrollAreaScrollbar
-  > {
+export interface ScrollBarProps extends React.ComponentPropsWithoutRef<
+  typeof ScrollAreaPrimitive.ScrollAreaScrollbar
+> {
   className?: string;
   orientation?: "vertical" | "horizontal";
 }
@@ -18525,8 +18519,9 @@ export interface ScrollBarProps
 ## Component Code
 
 ```tsx
-export interface ScrollAreaProps
-  extends React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> {
+export interface ScrollAreaProps extends React.ComponentPropsWithoutRef<
+  typeof ScrollAreaPrimitive.Root
+> {
   className?: string;
   children: React.ReactNode;
 }
@@ -18554,10 +18549,9 @@ export const ScrollArea = React.forwardRef<
   );
 });
 
-export interface ScrollBarProps
-  extends React.ComponentPropsWithoutRef<
-    typeof ScrollAreaPrimitive.ScrollAreaScrollbar
-  > {
+export interface ScrollBarProps extends React.ComponentPropsWithoutRef<
+  typeof ScrollAreaPrimitive.ScrollAreaScrollbar
+> {
   className?: string;
   orientation?: "vertical" | "horizontal";
 }
@@ -18622,7 +18616,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { TableBO } from "./TableBO";
 import { usePagination } from "./usePagination";
-
 ```
 
 ## Overview
@@ -19415,23 +19408,18 @@ function SortableExample() {
 ```typescript
 export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {}
 
-export interface TableHeaderProps
-  extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export interface TableHeaderProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
-export interface TableBodyProps
-  extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export interface TableBodyProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
-export interface TableRowProps
-  extends React.HTMLAttributes<HTMLTableRowElement> {}
+export interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement> {}
 
-export interface TableHeadProps
-  extends React.ThHTMLAttributes<HTMLTableCellElement> {
+export interface TableHeadProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
   column?: any;
   children?: React.ReactNode;
 }
 
-export interface TableCellProps
-  extends React.TdHTMLAttributes<HTMLTableCellElement> {}
+export interface TableCellProps extends React.TdHTMLAttributes<HTMLTableCellElement> {}
 ```
 
 ## Behavior
@@ -19469,8 +19457,7 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
 );
 Table.displayName = "Table";
 
-export interface TableHeaderProps
-  extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export interface TableHeaderProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
 const TableHeader = React.forwardRef<HTMLTableSectionElement, TableHeaderProps>(
   ({ className, ...props }, ref) => (
@@ -19479,8 +19466,7 @@ const TableHeader = React.forwardRef<HTMLTableSectionElement, TableHeaderProps>(
 );
 TableHeader.displayName = "TableHeader";
 
-export interface TableBodyProps
-  extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export interface TableBodyProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
 const TableBody = React.forwardRef<HTMLTableSectionElement, TableBodyProps>(
   ({ className, ...props }, ref) => (
@@ -19493,8 +19479,7 @@ const TableBody = React.forwardRef<HTMLTableSectionElement, TableBodyProps>(
 );
 TableBody.displayName = "TableBody";
 
-export interface TableRowProps
-  extends React.HTMLAttributes<HTMLTableRowElement> {}
+export interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement> {}
 
 const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
   ({ className, ...props }, ref) => (
@@ -19510,8 +19495,7 @@ const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
 );
 TableRow.displayName = "TableRow";
 
-export interface TableHeadProps
-  extends React.ThHTMLAttributes<HTMLTableCellElement> {
+export interface TableHeadProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
   column?: any;
   children?: React.ReactNode;
 }
@@ -19565,8 +19549,7 @@ const TableHead = React.forwardRef<HTMLTableCellElement, TableHeadProps>(
 );
 TableHead.displayName = "TableHead";
 
-export interface TableCellProps
-  extends React.TdHTMLAttributes<HTMLTableCellElement> {}
+export interface TableCellProps extends React.TdHTMLAttributes<HTMLTableCellElement> {}
 
 const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
   ({ className, ...props }, ref) => (
@@ -19838,8 +19821,7 @@ export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
 Timeline.displayName = "Timeline";
 
 // TimelineItem Component
-export interface TimelineItemProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface TimelineItemProps extends React.HTMLAttributes<HTMLDivElement> {
   step: number;
 }
 
@@ -19870,8 +19852,7 @@ export const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
 TimelineItem.displayName = "TimelineItem";
 
 // TimelineHeader Component
-export interface TimelineHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TimelineHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const TimelineHeader = React.forwardRef<
   HTMLDivElement,
@@ -19891,8 +19872,7 @@ export const TimelineHeader = React.forwardRef<
 TimelineHeader.displayName = "TimelineHeader";
 
 // TimelineSeparator Component
-export interface TimelineSeparatorProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TimelineSeparatorProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const TimelineSeparator = React.forwardRef<
   HTMLDivElement,
@@ -19930,8 +19910,7 @@ export const TimelineSeparator = React.forwardRef<
 TimelineSeparator.displayName = "TimelineSeparator";
 
 // TimelineIndicator Component
-export interface TimelineIndicatorProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface TimelineIndicatorProps extends React.HTMLAttributes<HTMLDivElement> {
   asChild?: boolean;
 }
 
@@ -19966,8 +19945,7 @@ export const TimelineIndicator = React.forwardRef<
 TimelineIndicator.displayName = "TimelineIndicator";
 
 // TimelineDate Component
-export interface TimelineDateProps
-  extends React.HTMLAttributes<HTMLTimeElement> {
+export interface TimelineDateProps extends React.HTMLAttributes<HTMLTimeElement> {
   asChild?: boolean;
 }
 
@@ -19994,8 +19972,7 @@ export const TimelineDate = React.forwardRef<
 TimelineDate.displayName = "TimelineDate";
 
 // TimelineTitle Component
-export interface TimelineTitleProps
-  extends React.HTMLAttributes<HTMLHeadingElement> {}
+export interface TimelineTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
 
 export const TimelineTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -20015,8 +19992,7 @@ export const TimelineTitle = React.forwardRef<
 TimelineTitle.displayName = "TimelineTitle";
 
 // TimelineContent Component
-export interface TimelineContentProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TimelineContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const TimelineContent = React.forwardRef<
   HTMLDivElement,
