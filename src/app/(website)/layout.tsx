@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google"; // 1. Import Font
-import "./globals.css";
+import "../globals.css";
 
 // 2. Setup Font Inter (Untuk Teks Biasa/Paragraf)
 const inter = Inter({ 

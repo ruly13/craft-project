@@ -15328,7 +15328,7 @@ export function MapWithPathExample() {
       <div className="rounded-lg border border-gray-200 p-4">
         <h3 className="mb-2 font-medium"> Logistics Route Tracking </h3>
         <MapWithPath
-          apiKey="YOUR_GOOGLE_MAPS_API_KEY"
+          apiKey={process.env.NEXT_PUBLIC_MAP_API || ""}
           mapContainerStyle={{ width: "100%", height: "500px" }}
           center={{ lat: -7.2575, lng: 112.7521 }}
           zoom={12}
@@ -15426,7 +15426,7 @@ export function MapWithPathExample() {
 
 | Prop                 | Type                                  | Default                                                                                  | Description                                                  |
 | -------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| apiKey               | `string`                              | "YOUR_GOOGLE_MAPS_API_KEY"                                                               | Google Maps API key                                          |
+| apiKey               | `string`                              | process.env.NEXT_PUBLIC_MAP_API                                                               | Google Maps API key                                          |
 | mapContainerStyle    | `React.CSSProperties`                 | `{ width: "100%", height: "400px" }`                                                     | Custom CSS styles for the map container                      |
 | center               | `{lat: number, lng: number}`          | `{ lat: -7.2575, lng: 112.7521 }`                                                        | Map center coordinates                                       |
 | zoom                 | `number`                              | 13                                                                                       | Map zoom level                                               |
@@ -15589,7 +15589,7 @@ const calculateBearing = (start: any, end: any) => {
  * Perfect for logistics, delivery tracking, and route optimization interfaces.
  */
 export const MapWithPath = ({
-  apiKey = "YOUR_GOOGLE_MAPS_API_KEY",
+  apiKey = process.env.NEXT_PUBLIC_MAP_API,
   mapContainerStyle = defaultMapContainerStyle,
   center = defaultCenter,
   zoom = defaultZoom,
