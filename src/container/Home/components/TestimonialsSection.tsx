@@ -8,7 +8,7 @@ export const TestimonialsSection = () => {
     <section className="py-20 px-6 bg-stone-100/50">
       <div className="container mx-auto text-center mb-16">
         <span className="text-emerald-600 font-bold tracking-wider text-xs uppercase mb-2 block">Apa Kata Mereka</span>
-        <h2 className="text-3xl font-bold font-serif text-stone-900">Testimoni Pelanggan</h2>
+        <h2 className="text-2xl md:text-3xl font-bold font-serif text-stone-900">Testimoni Pelanggan</h2>
       </div>
       
       <div className="container mx-auto grid md:grid-cols-3 gap-8">

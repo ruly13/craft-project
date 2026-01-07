@@ -27,7 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* 4. Masukkan variabel font ke dalam body */}
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-stone-50 text-stone-900`}>
+      <body 
+        suppressHydrationWarning={true}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-stone-50 text-stone-900`}
+      >
         {children}
       </body>
     </html>

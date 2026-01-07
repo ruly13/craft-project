@@ -6,8 +6,8 @@ export const FeaturesSection = () => {
   return (
     <section className="py-20 px-6">
       <div className="container mx-auto">
-        <div className="mb-16 max-w-2xl">
-          <h2 className="text-3xl font-bold font-serif text-stone-900 mb-4">Kualitas Terbaik Dari Pengrajin Lokal</h2>
+        <div className="mb-12 md:mb-16 max-w-2xl">
+          <h2 className="text-2xl md:text-3xl font-bold font-serif text-stone-900 mb-4">Kualitas Terbaik Dari Pengrajin Lokal</h2>
           <p className="text-stone-600">Kami bangga menggunakan bahan lokal dan tenaga ahli dari Indonesia untuk menciptakan karya seni fungsional.</p>
         </div>
 

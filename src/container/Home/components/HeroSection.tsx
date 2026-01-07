@@ -4,20 +4,20 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section className="relative pt-32 pb-20 px-6">
+    <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-20 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <h1 className="text-5xl lg:text-7xl font-bold font-serif text-stone-900 leading-[1.1]">
+        <div className="space-y-8 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-stone-900 leading-[1.1]">
             Sentuhan Alam untuk Hunian <span className="text-emerald-600">Nyaman</span>
           </h1>
-          <p className="text-lg text-stone-600 leading-relaxed max-w-lg">
+          <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
             Pengrajin mebel lokal dengan kualitas ekspor. Membawa kehangatan kayu Jati asli ke dalam rumah Anda.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 h-12 text-base">
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 h-12 text-base w-full sm:w-auto">
               Lihat Koleksi
             </Button>
-            <Button variant="outline" size="lg" className="border-stone-200 text-stone-700 hover:bg-stone-50 rounded-full px-8 h-12 text-base">
+            <Button variant="outline" size="lg" className="border-stone-200 text-stone-700 hover:bg-stone-50 rounded-full px-8 h-12 text-base w-full sm:w-auto">
               Hubungi Kami
             </Button>
           </div>

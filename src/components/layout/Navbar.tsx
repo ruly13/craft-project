@@ -50,10 +50,6 @@ export const Navbar = () => {
               Kontak
             </Link>
           </div>
-
-          <Button className="bg-[#10B981] hover:bg-[#059669] text-black font-semibold rounded-lg px-6 shadow-none">
-            Lihat Koleksi
-          </Button>
         </div>
 
         {/* Mobile Menu */}
