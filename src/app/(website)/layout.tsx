@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google"; // 1. Import Font
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google"; // 1. Import Font
 import "../globals.css";
 
-// 2. Setup Font Inter (Untuk Teks Biasa/Paragraf)
-const inter = Inter({ 
+// 2. Setup Font Plus Jakarta Sans (Untuk Teks Biasa/Paragraf)
+const jakarta = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
-  variable: "--font-inter", // Ini nama variabel buat Tailwind
+  variable: "--font-jakarta", // Ini nama variabel buat Tailwind
 });
 
 // 3. Setup Font Playfair (Untuk Judul Besar/Elegan)
@@ -29,7 +29,7 @@ export default function RootLayout({
       {/* 4. Masukkan variabel font ke dalam body */}
       <body 
         suppressHydrationWarning={true}
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-stone-50 text-stone-900`}
+        className={`${jakarta.variable} ${playfair.variable} font-sans antialiased bg-stone-50 text-stone-900`}
       >
         {children}
       </body>

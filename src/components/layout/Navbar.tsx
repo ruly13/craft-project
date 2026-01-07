@@ -37,17 +37,21 @@ export const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex items-center gap-8 text-sm font-medium text-stone-600">
-            <Link href="/home" className="hover:text-stone-900 transition-colors">
+            <Link href="/home" className="group relative hover:text-stone-900 transition-colors">
               Beranda
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="/katalog" className="hover:text-stone-900 transition-colors">
+            <Link href="/katalog" className="group relative hover:text-stone-900 transition-colors">
               Produk
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="#" className="hover:text-stone-900 transition-colors">
+            <Link href="#" className="group relative hover:text-stone-900 transition-colors">
               Tentang Kami
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="#" className="hover:text-stone-900 transition-colors">
+            <Link href="#" className="group relative hover:text-stone-900 transition-colors">
               Kontak
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
         </div>
@@ -80,40 +84,31 @@ export const Navbar = () => {
                 </SheetTitle>
               </SheetHeader>
               
-              <div className="mt-8 flex flex-col gap-4">
+              <div className="mt-8 flex flex-col space-y-2">
                 <Link 
                   href="/home" 
-                  className="text-base font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-50 py-3 px-4 rounded-lg transition-all"
+                  className="group flex items-center justify-between text-base font-medium text-stone-600 hover:text-emerald-600 hover:bg-emerald-50 py-3 px-4 rounded-xl transition-all"
                 >
                   Beranda
                 </Link>
-                <Separator />
                 <Link 
                   href="/katalog" 
-                  className="text-base font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-50 py-3 px-4 rounded-lg transition-all"
+                  className="group flex items-center justify-between text-base font-medium text-stone-600 hover:text-emerald-600 hover:bg-emerald-50 py-3 px-4 rounded-xl transition-all"
                 >
                   Produk
                 </Link>
-                <Separator />
                 <Link 
                   href="#" 
-                  className="text-base font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-50 py-3 px-4 rounded-lg transition-all"
+                  className="group flex items-center justify-between text-base font-medium text-stone-600 hover:text-emerald-600 hover:bg-emerald-50 py-3 px-4 rounded-xl transition-all"
                 >
                   Tentang Kami
                 </Link>
-                <Separator />
                 <Link 
                   href="#" 
-                  className="text-base font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-50 py-3 px-4 rounded-lg transition-all"
+                  className="group flex items-center justify-between text-base font-medium text-stone-600 hover:text-emerald-600 hover:bg-emerald-50 py-3 px-4 rounded-xl transition-all"
                 >
                   Kontak
                 </Link>
-                
-                <div className="mt-6 px-4">
-                  <Button className="w-full bg-[#10B981] hover:bg-[#059669] text-black font-semibold rounded-lg h-11 text-base shadow-none">
-                    Lihat Koleksi
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>

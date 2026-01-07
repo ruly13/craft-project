@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-20 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-stone-900 leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-sans text-stone-900 leading-[1.1]">
             Sentuhan Alam untuk Hunian <span className="text-emerald-600">Nyaman</span>
           </h1>
           <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-lg mx-auto lg:mx-0">

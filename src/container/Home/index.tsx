@@ -4,7 +4,6 @@ import { HeroSection } from "./components/HeroSection";
 import { CategoriesSection } from "./components/CategoriesSection";
 import { FeaturesSection } from "./components/FeaturesSection";
 import { TestimonialsSection } from "./components/TestimonialsSection";
-import { NewsletterSection } from "./components/NewsletterSection";
 import { Footer } from "@/components/layout/Footer";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,7 +15,6 @@ export default function HomeContainer({ categories }: { categories?: any[] }) {
       <CategoriesSection categories={categories} />
       <FeaturesSection />
       <TestimonialsSection />
-      <NewsletterSection />
       <Footer />
     </div>
   );

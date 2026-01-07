@@ -28,7 +28,7 @@ export const CategoriesSection = ({ categories }: Props) => {
     <section className="py-20 px-6 bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif text-stone-900">Kategori Pilihan</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold font-sans text-stone-900">Kategori Pilihan</h2>
           <Link href="/katalog" className="text-emerald-600 font-medium flex items-center gap-2 hover:gap-3 transition-all self-start sm:self-auto">
             Lihat Semua <ArrowRight className="h-4 w-4" />
           </Link>
